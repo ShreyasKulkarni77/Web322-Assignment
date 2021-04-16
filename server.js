@@ -1,8 +1,8 @@
 /**********************************************************************************  
- * WEB322 –Assignment 03-05*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  
+ * WEB322 –Assignment 04-06*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  
  * No part *  of this assignment has been copied manually or electronically from any other source *  
  * (including 3rd party web sites) or distributed to other students.* *  
- * Name:Shreyas Shrishar Kulkarni Student ID:144912177 Date: 10th December 2020**  
+ * Name:Shreyas Shrishar Kulkarni Student ID:144912177 Date: 14th April 2021n**  
  * Online (Heroku, https://...) Link:https://web322mealdelivery.herokuapp.com/
 *********************************************************************************/
 
@@ -14,8 +14,8 @@ const exphbs = require('express-handlebars');
 const db = require('./model/dataDB');
 const app = express();
 const bodyParser = require('body-parser');
-const clientSessions = require("client-sessions"); //assign3
-const dataServiceAuth = require("./model/dataAuthUsers.js"); //assign3
+const clientSessions = require("client-sessions"); 
+const dataServiceAuth = require("./model/dataAuthUsers.js"); 
 const data = require("./model/dataClerk.js");
 const ds = require("./model/cart");
 const cart = require("./model/cart.js");
@@ -27,21 +27,21 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-app.use(clientSessions({ //assign3
+app.use(clientSessions({ 
     cookieName: "session",
     secret: "web322Assignment",
     duration: 2 * 60 * 1000,
     activeDuration: 1000 * 60
 }));
 
-app.use(clientSessions({ //assign3
+app.use(clientSessions({ 
     cookieName: "dataClerkSession",
     secret: "web322Assignment_dataclerk",
     duration: 2 * 60 * 1000,
     activeDuration: 1000 * 60
 }));
 
-app.use(function (req, res, next) { //assign3
+app.use(function (req, res, next) { 
     res.locals.session = req.session;
     next();
 });
@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
     next();
 })
 
-function ensureLogin(req, res, next) { //assign3 
+function ensureLogin(req, res, next) { 
     if (!req.session.user) {
         res.redirect("/login");
     } else {
@@ -59,7 +59,7 @@ function ensureLogin(req, res, next) { //assign3
     }
 }
 
-function ensureDataClerkLogin(req, res, next) { //assign3 
+function ensureDataClerkLogin(req, res, next) { 
     if (!req.dataClerkSession.user) {
         res.redirect("/login");
     } else {
@@ -204,7 +204,7 @@ app.post("/signup", (req, res) => {
             sgMail.setApiKey(`${process.env.SENDGRID_API_KEY}`);
             const msg = {
                 to: `${Email}`,
-                from: 'saeed.e.salar@gmail.com',
+                from: 'shreyas.rebel1@gmail.com',
                 subject: 'Welcome to Speghettio!',
                 html: `Hello ${firstName} ${lastName}, welcome to Speghettio!<br>Here you can mix and match between a variety of dishes.
         <br>Best regards<br>Chef Noodle`
