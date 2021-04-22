@@ -15,7 +15,7 @@ let Package;
 
 module.exports.initialize = function() {
     return new Promise(function (resolve, reject) {
-        let db = mongoose.createConnection(process.env.mongoKey,
+        let db = mongoose.createConnection('mongodb+srv://shrey:Iamtherebel1@cluster0.jhaja.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
             {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
         db.on('error', (err)=>{
