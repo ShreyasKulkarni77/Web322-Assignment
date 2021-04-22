@@ -5,7 +5,7 @@
  * Name:Shreyas Shrishar Kulkarni Student ID:144912177 Date: 14th April 2021n**  
  * Online (Heroku, https://...) Link:https://web322mealdelivery.herokuapp.com/
 *********************************************************************************/
-
+/* My herko stopped working suddenly and is giving me H10 error I tried to solve the issue but unsuccessful. I will try to fix it but sumitting before time to be safe*/
 
 
 
