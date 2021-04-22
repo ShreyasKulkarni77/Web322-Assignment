@@ -1,11 +1,11 @@
 {
   "name": "assignment2",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "ng build",
+    "heroku-postbuild": "ng build --prod"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +19,15 @@
     "express-handlebars": "^5.1.0",
     "git": "^0.1.5",
     "mongoose": "^5.12.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyasKulkarni77/Web322-Assignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShreyasKulkarni77/Web322-Assignment/issues"
+  },
+  "homepage": "https://github.com/ShreyasKulkarni77/Web322-Assignment#readme",
+  "description": ""
 }
