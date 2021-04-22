@@ -21,7 +21,6 @@ const ds = require("./model/cart");
 const cart = require("./model/cart.js");
 
 require('dotenv').config({ path: "./config/keys.env" });
-mongoose.connect('mongodb://localhost:27017/myapp', {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
